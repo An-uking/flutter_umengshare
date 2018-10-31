@@ -47,11 +47,10 @@ public class UmengsharePlugin implements MethodCallHandler,ActivityResultListene
     this.channel=channel;
     init(registrar.context());
   }
-  
+
   private void init(Context context){
       UMConfigure.init(context,"5b35faeff29d98344e00003d","umengshare",UMConfigure.DEVICE_TYPE_PHONE,"");//58edcfeb310c93091c000be2 5965ee00734be40b580001a0
       PlatformConfig.setWeixin("wxdc1e388c3822c80b", "3baf1193c85774b3fd9d18447d76cab0");
-      //豆瓣RENREN平台目前只能在服务器端配置
       PlatformConfig.setSinaWeibo("3921700954", "04b48b094faeb16683c32669824ebdad","http://sns.whalecloud.com");
       PlatformConfig.setQQZone("100424468", "c7394704798a158208a74ab60104f0ba");
       //PlatformConfig.setTwitter("3aIN7fuF685MuZ7jtXkQxalyi", "MK6FEYG63eWcpDFgRYw4w9puJhzDl0tyuqWjZ3M7XJuuG7mMbO");
