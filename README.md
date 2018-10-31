@@ -19,7 +19,7 @@ https://developer.umeng.com/docs/66632/detail/66639#h1-u96C6u6210u51C6u59073
 https://developer.umeng.com/docs/66632/detail/66639#h3--android-manifest-xml
 ## 3.初始化设置
 修改文件 /android/src/main/java/cn/ugle/flutter/umengshage/UmengsharePlugin.java中的appkey
-## 4.扩展其第三方分享和登陆库
+## 4.扩展其他第三方分享和登陆库
 
 到友盟官方去下载相应包到根目libs下
 
@@ -46,7 +46,7 @@ https://developer.umeng.com/docs/66632/detail/66639#h3--android-manifest-xml
 
 修改 ios/classes/UmengsharePlugin.m 中的setupUSharePlatforms函数里的appkey
 
-## 3.扩展其第三方分享和登陆库
+## 3.扩展其他第三方分享和登陆库
 
 Cocoapods集成
 
@@ -59,4 +59,19 @@ https://developer.umeng.com/docs/66632/detail/67204#h2--sdk4
 2.修改umengshare.dart文件
 
 增加相应的分享类型和登陆类型的枚举
+
+# 相应函数
+在lib/umengshare里写得很详细了
+### 分享文本
+```UMengShare.shareText(UMSharePlatform platform,String text)```
+### 分享图片
+```UMengShare.shareImage(UMSharePlatform platform,String thumb,String image)```
+### 分享媒体
+```UMengShare.shareMedia(UMSharePlatform platform,UMShareMediaType type,String title,String desc,String thumb,String link)```
+### 分享小程序（只能分享给微信好友）
+```UMengShare.shareMiniApp(String username,String title,String desc,String thumb,String url,String path)```
+### 第三方登录
+```UMengShare.login(UMPlatform platform)```
+### 检测是否安装应用
+```UMengShare.checkInstall(UMPlatform platform)```
 
