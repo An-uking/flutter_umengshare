@@ -20,28 +20,43 @@ https://developer.umeng.com/docs/66632/detail/66639#h3--android-manifest-xml
 ## 3.初始化设置
 修改文件 /android/src/main/java/cn/ugle/flutter/umengshage/UmengsharePlugin.java中的appkey
 ## 4.扩展其第三方分享和登陆库
+
 到友盟官方去下载相应包到根目libs下
+
 1.修改/android/src/main/java/cn/ugle/flutter/umengshage/UmengsharePlugin.java
+
 2.修改umengshare.dart文件
+
 增加相应的分享类型和登陆类型的枚举
 
 # IOS 配置 （参考友盟官方文档）
 ## 1.平台配置
 
 看文档 https://developer.umeng.com/docs/66632/detail/66825#h2-u7B2Cu4E09u65B9u5E73u53F0u914Du7F6E3
+
 1.配置SSO白名单
+
 2.配置URL Scheme
+
 3.权限配置
 
 ## 2.初始化设置
+
 初始化U-Share及第三方平台
+
 修改 ios/classes/UmengsharePlugin.m 中的setupUSharePlatforms函数里的appkey
 
 ## 3.扩展其第三方分享和登陆库
 
 Cocoapods集成
+
 https://developer.umeng.com/docs/66632/detail/67204#h2--sdk4
+
 去友盟官网文档中找到相应的第三方库 添加到 /ios/umengshare.podspec中去
+
 1.修改ios/classes/UmengsharePlugin.m
+
 2.修改umengshare.dart文件
+
 增加相应的分享类型和登陆类型的枚举
+
