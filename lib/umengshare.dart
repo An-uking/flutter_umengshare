@@ -70,7 +70,7 @@ class UMengShare {
   /// 
   /// 返回参数说明 um_status : SUCCESS 成功 ERROR 失败 CANCEL 用户取消
   static Future<dynamic> shareText(UMSharePlatform platform,String text) async {
-    final Map<dynamic,dynamic> result= await _channel.invokeMethod('shareText',{"platform":platform.index,"text":text});
+    Map<dynamic,dynamic> result= await _channel.invokeMethod('shareText',{"platform":platform.index,"text":text});
     return result;
   }
   /// 分享图片
@@ -83,7 +83,7 @@ class UMengShare {
   /// 
   /// 返回参数说明 um_status : SUCCESS 成功 ERROR 失败 CANCEL 用户取消
   static Future<dynamic> shareImage(UMSharePlatform platform,String thumb,String image) async{
-    final Map<dynamic,dynamic> result = await _channel.invokeMethod('shareImage',{'platform':platform.index,"thumb":thumb,"image":image});
+    Map<dynamic,dynamic> result = await _channel.invokeMethod('shareImage',{'platform':platform.index,"thumb":thumb,"image":image});
     return result;
   }
   /// 分享媒体
@@ -104,7 +104,7 @@ class UMengShare {
   /// 
   /// 返回参数说明 um_status : SUCCESS 成功 ERROR 失败 CANCEL 用户取消
   static Future<dynamic> shareMedia(UMSharePlatform platform,UMShareMediaType type,String title,String desc,String thumb,String link) async{
-    final Map<dynamic,dynamic> result = await _channel.invokeMethod('shareMedia',{"platform":platform.index,"type":type.index,"title":title,"desc":desc,"thumb":thumb,"link":link});
+    Map<dynamic,dynamic> result = await _channel.invokeMethod('shareMedia',{"platform":platform.index,"type":type.index,"title":title,"desc":desc,"thumb":thumb,"link":link});
     return result;
   }
   /// 分享小程序（只能分享给微信好友）
@@ -125,7 +125,7 @@ class UMengShare {
   /// 
   /// 返回参数说明 um_status : SUCCESS 成功 ERROR 失败 CANCEL 用户取消
   static Future<dynamic> shareMiniApp(String username,String title,String desc,String thumb,String url,String path) async{
-    final Map<dynamic,dynamic> result = await _channel.invokeMethod('shareMiniApp',{"username":username,"title":title,"desc":desc,"thumb":thumb,"url":url,"path":path});
+    Map<dynamic,dynamic> result = await _channel.invokeMethod('shareMiniApp',{"username":username,"title":title,"desc":desc,"thumb":thumb,"url":url,"path":path});
     return result;
   }
   /// 登录
@@ -135,7 +135,7 @@ class UMengShare {
   /// 返回参数说明 um_status : SUCCESS 成功 ERROR 失败 CANCEL 用户取消
   /// 如果成功 用户信息会包含在该返回对象中
   static Future<dynamic> login(UMPlatform platform) async{
-    final Map<dynamic,dynamic> result = await _channel.invokeMethod('login',{"platform":platform.index});
+    Map<dynamic,dynamic> result = await _channel.invokeMethod('login',{"platform":platform.index});
     return result;
   }
   /// 检测是否安装应用
@@ -144,7 +144,7 @@ class UMengShare {
   /// 
   /// 返回参数说明 bool
   static Future<dynamic> checkInstall(UMPlatform platform) async{
-    final bool result = await _channel.invokeMethod('checkInstall',{"platform":platform.index});
+    bool result = await _channel.invokeMethod('checkInstall',{"platform":platform.index});
     return result;
   }
 }

@@ -47,24 +47,7 @@ public class UmengsharePlugin implements MethodCallHandler,ActivityResultListene
     this.channel=channel;
     init(registrar.context());
   }
-  // private Map<String,String> getKVS(){
-  //   Map<String,String> map = new HashMap<>();
-  //   try {
-  //     ApplicationInfo applicationInfo=registrar.context().getPackageManager().getApplicationInfo(registrar.context().getPackageName(),PackageManager.GET_META_DATA);
-  //     map.put("UMENG_APPKEY",applicationInfo.metaData.getString("UMENG_APPKEY"));
-  //     map.put("WEIBO_APPID",applicationInfo.metaData.getString("WEIBO_APPID"));
-  //     map.put("WEIBO_APPKEY",applicationInfo.metaData.getString("WEIBO_APPKEY"));
-  //     map.put("WECAHT_APPID",applicationInfo.metaData.getString("WECAHT_APPID"));
-  //     map.put("WECHAT_APPKEY",applicationInfo.metaData.getString("WECHAT_APPKEY"));
-  //     map.put("QQZONE_APPID",applicationInfo.metaData.getString("QQZONE_APPID"));
-  //     map.put("QQZONE_APPKEY",applicationInfo.metaData.getString("QQZONE_APPKEY"));
-  //   } catch(Exception e) {
-
-  //     map=null;
-  //     throw new NullPointerException("not null");
-  //   }
-  //   return map;
-  // }
+  
   private void init(Context context){
       UMConfigure.init(context,"5b35faeff29d98344e00003d","umengshare",UMConfigure.DEVICE_TYPE_PHONE,"");//58edcfeb310c93091c000be2 5965ee00734be40b580001a0
       PlatformConfig.setWeixin("wxdc1e388c3822c80b", "3baf1193c85774b3fd9d18447d76cab0");
