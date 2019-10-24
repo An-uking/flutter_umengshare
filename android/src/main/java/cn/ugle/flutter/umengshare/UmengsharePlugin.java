@@ -44,6 +44,7 @@ public class UmengsharePlugin implements MethodCallHandler,ActivityResultListene
   }
   private UmengsharePlugin(Registrar registrar,MethodChannel channel){
     this.registrar=registrar;
+    this.registrar.addActivityResultListener(this);
     this.channel=channel;
     init(registrar.context());
   }
